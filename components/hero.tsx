@@ -1,6 +1,8 @@
 import Link from "next/link"
 import { Button } from "./ui/button"
 import {MoveRight} from "lucide-react"
+import {BsDiscord} from "react-icons/bs"
+
 const Hero = () => {
   return (
     <div className="flex items-center justify-center h-full ">
@@ -9,13 +11,18 @@ const Hero = () => {
             <p className="text-sm md:text-md text-muted-foreground text-center">
                 Get along with your friends from all across the web and share gossips for free . Join now and get free acces to all of gossip&apos;s features. Click on join now to immediatly join our community.
             </p>
-            <div className="buttons flex items-center gap-3">
+            <div className="buttons flex items-center gap-5">
+            <Button variant="secondary">
+              Join our Discord
+              <BsDiscord className="w-5 h-5 ml-2"/>
+            </Button>
             <Button>
                 <Link href="/login">
                 Join Now
                 </Link>
                 <MoveRight className="h-4 w-4 ml-2" />
             </Button>
+           
         </div>
         </div>
        
