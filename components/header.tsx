@@ -13,9 +13,11 @@ const githubLink = "https://github.com/zakirali05/Gossip"
         </div>
         <div className="flex items-center gap-2">
             <ModeToggle/>
+            <Button size='sm' variant="ghost">
             <a href={githubLink} target="blank">
             <BsGithub className="h-5 w-5"/>
             </a>
+            </Button>
             <Button size="sm" variant="secondary">
                 <Link href="/login">
                 Sign up
