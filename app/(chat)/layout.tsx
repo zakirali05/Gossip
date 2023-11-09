@@ -1,3 +1,4 @@
+import { initialUser } from "@/lib/initialUser";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -6,12 +7,12 @@ export const metadata: Metadata = {
     "Chatting pages for Gossip web app. Most advanced chatting app on the web.",
 };
 
-export default function RootLayout({
+export default async  function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
 
- 
+ const profile = await initialUser()
   return <div>{children}</div>;
 }
