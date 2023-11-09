@@ -18,7 +18,7 @@ const Hero = () => {
             </Button>
             <Button>
                 <Link href="/login">
-                Join Now
+                Start Chatting
                 </Link>
                 <MoveRight className="h-4 w-4 ml-2" />
             </Button>
