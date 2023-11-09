@@ -13,8 +13,8 @@ import Link from "next/link"
 
 const RegisterPage = () => {
   return (
-    <div>
-      <Card className="min-w-[350px]">
+    <div >
+      <Card className="min-w-[350px] mb-5">
         <CardHeader className="gap-1">
           <CardTitle>Register your account</CardTitle>
           <CardDescription>Your friends are waiting for you...</CardDescription>
