@@ -5,6 +5,7 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import {FcGoogle} from "react-icons/fc"
 import { Button } from "@/components/ui/button"
+import {SignInButton} from "@clerk/nextjs"
 import {
   Form,
   FormControl,
@@ -76,7 +77,9 @@ const isLoading = form.formState.isSubmitting
 </form>
 
 <Separator className=" w-full my-4"/>
+<SignInButton mode="modal">
 <Button disabled={isLoading}    className="w-full"><FcGoogle className="h-4 w-4 mr-2"/> Sign in with Google</Button>
+</SignInButton>
     </Form>
   )
 };

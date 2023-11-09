@@ -2,8 +2,11 @@ import Link from "next/link"
 import { Button } from "./ui/button"
 import {MoveRight} from "lucide-react"
 import {BsDiscord} from "react-icons/bs"
+import { currentUser} from "@clerk/nextjs"
+const Hero = async () => {
+const user = await currentUser()
+  
 
-const Hero = () => {
   return (
     <div className="flex items-center justify-center h-full ">
         <div className="max-w-2xl h-[calc(100vh-200px)]   flex flex-col items-center justify-center gap-4 px-8 py-5 mt-5">
@@ -17,7 +20,7 @@ const Hero = () => {
               <BsDiscord className="w-5 h-5 ml-2"/>
             </Button>
             <Button>
-                <Link href="/login">
+                <Link href={user ? "/chat" : "/login"}>
                 Start Chatting
                 </Link>
                 <MoveRight className="h-4 w-4 ml-2" />

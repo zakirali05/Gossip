@@ -5,6 +5,7 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { FcGoogle } from "react-icons/fc";
 import { Button } from "@/components/ui/button";
+import {SignUpButton , useAuth } from "@clerk/nextjs"
 import {
   Form,
   FormControl,
@@ -99,9 +100,11 @@ const RegisterForm = () => {
       </form>
 
       <Separator className=" w-full my-4" />
+<SignUpButton mode="modal">
       <Button disabled={isLoading}   className="w-full">
         <FcGoogle className="h-4 w-4 mr-2" /> Sign up with Google
       </Button>
+      </SignUpButton> 
     </Form>
   );
 };
