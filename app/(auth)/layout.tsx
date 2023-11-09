@@ -1,4 +1,5 @@
 import BackButton from "@/components/back-button";
+import Footer from "@/components/footer";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -17,5 +18,6 @@ export default function RootLayout({
   return <div className="w-screen h-screen flex items-center justify-center relative">
    <BackButton/>
     {children}
+    <Footer/>
     </div>;
 }

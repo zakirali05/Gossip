@@ -1,7 +1,8 @@
+"use client"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "./ui/button";
 import { MessageSquare } from "lucide-react";
-
+import {useState,useEffect} from "react"
 import {
   Tooltip,
   TooltipContent,
@@ -10,9 +11,16 @@ import {
 } from "@/components/ui/tooltip";
 
 const Footer = () => {
+  const [mounted,setMounted] = useState(false)
+  useEffect(()=>{
+setMounted(true)
+  },[])
   const profileImg =
     "https://avatars.githubusercontent.com/u/109236535?s=400&u=4e86c15b051226606a27a832c48b56b439804b3a&v=4";
 
+    if(!mounted){
+      return null
+    }
   return (
     <div className="flex items-center justify-between    px-5 py-2  border-t border-secondary absolute bottom-0 w-full">
       <div className="flex items-center gap-3">
@@ -28,9 +36,9 @@ const Footer = () => {
       <TooltipProvider>
         <Tooltip delayDuration={10} >
           <TooltipTrigger>
-            <Button size="sm" variant="secondary">
+            
               <MessageSquare />
-            </Button>
+            
           </TooltipTrigger>
           <TooltipContent side="left">
             <p>Chat with the creator</p>
