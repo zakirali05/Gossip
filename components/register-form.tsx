@@ -42,6 +42,8 @@ const RegisterForm = () => {
     console.log(values);
   };
 
+  const isLoading = form.formState.isSubmitting
+
   return (
     <Form {...form}>
       <form
@@ -55,7 +57,7 @@ const RegisterForm = () => {
             <FormItem>
               <FormLabel>EmailAdress</FormLabel>
               <FormControl>
-                <Input placeholder="Emailaddress" {...field} />
+                <Input disabled={isLoading}   placeholder="Emailaddress" {...field} />
               </FormControl>
 
               <FormMessage />
@@ -69,7 +71,7 @@ const RegisterForm = () => {
             <FormItem>
               <FormLabel>EmailAdress</FormLabel>
               <FormControl>
-                <Input placeholder="Username" {...field} />
+                <Input disabled={isLoading}   placeholder="Username" {...field} />
               </FormControl>
 
               <FormMessage />
@@ -83,7 +85,7 @@ const RegisterForm = () => {
             <FormItem>
               <FormLabel>Password</FormLabel>
               <FormControl>
-                <Input placeholder="Password" {...field} />
+                <Input disabled={isLoading}   placeholder="Password" {...field} />
               </FormControl>
 
               <FormMessage />
@@ -91,13 +93,13 @@ const RegisterForm = () => {
           )}
         />
 
-        <Button type="submit" className="mt-4" variant="outline">
+        <Button  disabled={isLoading}   type="submit" className="mt-4" variant="outline">
           Register
         </Button>
       </form>
 
       <Separator className=" w-full my-4" />
-      <Button className="w-full">
+      <Button disabled={isLoading}   className="w-full">
         <FcGoogle className="h-4 w-4 mr-2" /> Sign up with Google
       </Button>
     </Form>

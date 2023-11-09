@@ -38,7 +38,7 @@ const LoginForm = () => {
     console.log(values);
   };
 
-
+const isLoading = form.formState.isSubmitting
   return (
     <Form {...form}>
 <form onSubmit={form.handleSubmit(onSubmit)} className="flex flex-col gap-2" >
@@ -49,7 +49,7 @@ const LoginForm = () => {
             <FormItem>
               <FormLabel>EmailAdress</FormLabel>
               <FormControl>
-                <Input  placeholder="Emailaddress" {...field} />
+                <Input disabled={isLoading}   placeholder="Emailaddress" {...field} />
               </FormControl>
          
               <FormMessage />
@@ -64,7 +64,7 @@ const LoginForm = () => {
             <FormItem>
               <FormLabel>Password</FormLabel>
               <FormControl>
-                <Input placeholder="Password" {...field} />
+                <Input  disabled={isLoading}  placeholder="Password" {...field} />
               </FormControl>
               
               <FormMessage />
@@ -72,11 +72,11 @@ const LoginForm = () => {
           )}
         />
 
-        <Button type="submit"   className="mt-4" variant="outline">Login</Button>
+        <Button disabled={isLoading}   type="submit"   className="mt-4" variant="outline">Login</Button>
 </form>
 
 <Separator className=" w-full my-4"/>
-<Button className="w-full"><FcGoogle className="h-4 w-4 mr-2"/> Sign in with Google</Button>
+<Button disabled={isLoading}    className="w-full"><FcGoogle className="h-4 w-4 mr-2"/> Sign in with Google</Button>
     </Form>
   )
 };
