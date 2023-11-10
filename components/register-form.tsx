@@ -70,7 +70,7 @@ const RegisterForm = () => {
           name="username"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>EmailAdress</FormLabel>
+              <FormLabel>Username</FormLabel>
               <FormControl>
                 <Input disabled={isLoading}   placeholder="Username" {...field} />
               </FormControl>
