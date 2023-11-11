@@ -1,5 +1,6 @@
 import { initialUser } from "@/lib/initialUser";
 import type { Metadata } from "next";
+import SideBar from "@/components/side-bar"
 
 export const metadata: Metadata = {
   title: "Gossip | Chat Page",
@@ -14,5 +15,11 @@ export default async  function RootLayout({
 }) {
 
  const profile = await initialUser()
-  return <div>{children}</div>;
+  return <>
+    <SideBar/>
+    <main className="pl-0 md:ml-[300px]">
+    {children}
+    </main>
+   
+    </>;
 }

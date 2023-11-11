@@ -16,6 +16,8 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Separator } from "./ui/separator";
+import { NextResponse } from "next/server";
+import { db } from "@/lib/db";
 
 const RegisterForm = () => {
   const formSchema = z.object({
@@ -39,8 +41,8 @@ const RegisterForm = () => {
     },
   });
 
-  const onSubmit = (values: z.infer<typeof formSchema>) => {
-    console.log(values);
+  const onSubmit = async(values: z.infer<typeof formSchema>) => {
+   console.log(values)
   };
 
   const isLoading = form.formState.isSubmitting

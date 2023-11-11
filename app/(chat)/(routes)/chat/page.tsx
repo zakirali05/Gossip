@@ -3,7 +3,7 @@ import { UserButton } from "@clerk/nextjs"
 const ChatPage = () => {
 
   return (
-    <div><UserButton afterSignOutUrl="/"/></div>
+    <div>chatPage</div>
   )
 }
 
