@@ -9,6 +9,7 @@ import {  Menu, Settings, User, UserPlus } from "lucide-react";
 import { Button } from "./ui/button";
 import { UserButton, currentUser } from "@clerk/nextjs";
 import { Separator } from "./ui/separator";
+import { ModeToggle } from "./mode-toggler";
 
 
 
@@ -100,9 +101,14 @@ const SideBar = async () => {
         </div>
       </aside>
     <Sheet >
+      <div className="w-full items-center justify-between flex ">
         <SheetTrigger className="block md:hidden m-3">
            <Menu />
         </SheetTrigger>
+        <div className="pr-2 md:hidden">
+        <ModeToggle/>
+        </div>
+        </div>
         <SheetContent side={'left'}>
            
         <aside
