@@ -22,7 +22,7 @@ export default function RootLayout({
   return (
     <ClerkProvider>
     <html lang="en">
-      <body className={`${inter.className} bg-slate-50`}>
+      <body className={`${inter.className} bg-slate-50 dark:bg-[#020817]`}>
         <ThemeProvider
          attribute="class"
          defaultTheme="system"

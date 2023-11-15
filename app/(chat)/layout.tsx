@@ -17,7 +17,7 @@ export default async  function RootLayout({
  const profile = await initialUser()
   return <>
     <SideBar/>
-    <main className="pl-0 md:ml-[300px]">
+    <main className="pl-0 md:ml-[300px] h-screen">
     {children}
     </main>
    
