@@ -10,6 +10,7 @@ import { Button } from "./ui/button";
 import { UserButton, currentUser } from "@clerk/nextjs";
 import { Separator } from "./ui/separator";
 import { ModeToggle } from "./mode-toggler";
+import Link from "next/link";
 
 
 
@@ -27,14 +28,15 @@ const SideBar = async () => {
         h-full justify-between"
         >
           <div className="logo">
-            <h2 className="font-bold text-lg">Gossip.</h2>
+            <Link href="/chat" className="font-bold text-lg">Gossip.</Link>
           </div>
           <div
             className="flex flex-col gap-3 justify-start h-[70%]
           overflow-auto
           "
           >
-            <div
+            <Link 
+            href="/chat/invite"
               className="one flex gap-3 items-center 
               cursor-pointer
               transition
@@ -47,8 +49,9 @@ const SideBar = async () => {
               h-5 w-5"
               />
               Invite
-            </div>
-            <div
+            </Link>
+            <Link
+            href="/chat/requests"
               className="two
               flex gap-3 items-center
               cursor-pointer
@@ -59,8 +62,9 @@ const SideBar = async () => {
             >
               <User className="h-5 w-5" />
               Requests
-            </div>
-            <div
+            </Link>
+            <Link
+            href="/chat/settings"
               className="three
               flex gap-3 items-center
               cursor-pointer
@@ -70,7 +74,7 @@ const SideBar = async () => {
             >
               <Settings className="h-5 w-5" />
               Settings
-            </div>
+            </Link>
             <Separator className=" w-full my-2" />
             <div>
             <p className="text-sm text-muted-foreground">Invite user to start chatting</p>
@@ -120,14 +124,15 @@ const SideBar = async () => {
         h-full justify-between"
         >
           <div className="logo">
-            <h2 className="font-bold text-lg">Gossip.</h2>
+            <Link href="/chat" className="font-bold text-lg">Gossip.</Link>
           </div>
           <div
             className="flex flex-col gap-3 justify-start h-[70%]
           overflow-auto
           "
           >
-            <div
+            <Link
+            href="/chat/invite"
               className="one flex gap-3 items-center 
               cursor-pointer
               transition
@@ -140,8 +145,9 @@ const SideBar = async () => {
               h-5 w-5"
               />
               Invite
-            </div>
-            <div
+            </Link>
+            <Link
+            href="/chat/requests"
               className="two
               flex gap-3 items-center
               cursor-pointer
@@ -152,7 +158,7 @@ const SideBar = async () => {
             >
               <User className="h-5 w-5" />
               Requests
-            </div>
+            </Link>
             <div
               className="three
               flex gap-3 items-center
