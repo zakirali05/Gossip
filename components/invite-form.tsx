@@ -5,7 +5,9 @@ import * as z from "zod"
 import { Form, FormControl, FormField, FormItem } from "./ui/form";
 import { Input } from "./ui/input";
 import { Button } from "./ui/button";
+import { useToast } from "./ui/use-toast";
 const InviteForm = () => {
+  const {toast} = useToast()
     const formSchema = z.object({
         emailaddress: z.string()
       
@@ -22,6 +24,11 @@ const InviteForm = () => {
       const isLoading = form.formState.isSubmitting
       const onSubmit = (values: z.infer<typeof formSchema>) => {
         console.log(values);
+        toast({
+          description : "invitation sent succesfully",
+          
+        })
+        
       };
     
   return (
